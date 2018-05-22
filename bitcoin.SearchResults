@@ -1,0 +1,9 @@
+---- gettransaction Matches (8 in 3 files) ----
+Client.cpp (src\rpc):    { "gettransaction", 1, "include_watchonly" },
+Rawtransaction.cpp (src\rpc):        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, errmsg + ". Use gettransaction for wallet transactions.");
+Rpcwallet.cpp (src\wallet):UniValue gettransaction(const JSONRPCRequest& request)
+Rpcwallet.cpp (src\wallet):            "gettransaction \"txid\" ( include_watchonly )\n"
+Rpcwallet.cpp (src\wallet):            + HelpExampleCli("gettransaction", "\"1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d\"")
+Rpcwallet.cpp (src\wallet):            + HelpExampleCli("gettransaction", "\"1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d\" true")
+Rpcwallet.cpp (src\wallet):            + HelpExampleRpc("gettransaction", "\"1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d\"")
+Rpcwallet.cpp (src\wallet):    { "wallet",             "gettransaction",           &gettransaction,           {"txid","include_watchonly"} },
